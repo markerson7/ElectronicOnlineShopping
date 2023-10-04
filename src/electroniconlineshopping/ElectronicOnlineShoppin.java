@@ -31,8 +31,11 @@ public class ElectronicOnlineShoppin {
      public void displayProductsBoughtInfo() {
         System.out.println("Products Bought Information:");
         for (Products product : boughtProducts) {
+            System.out.println("====================================");
             System.out.println(product);
+            
         }
+        System.out.println("====================================");
         double totalSpent = boughtProducts.stream().mapToDouble(Products::getBuyingPrice).sum();
         System.out.println("Total Amount Spent: $" + totalSpent);
     }
@@ -41,8 +44,11 @@ public class ElectronicOnlineShoppin {
         public void displayProductsSoldInfo() {
         System.out.println("Products Sold Information:");
         for (Products product : soldProducts) {
+            System.out.println("====================================");
             System.out.println(product);
+            
         }
+        System.out.println("====================================");
         double totalEarned = soldProducts.stream().mapToDouble(Products::getSellingPrice).sum();
         System.out.println("Total Amount Earned: $" + totalEarned);
     }
