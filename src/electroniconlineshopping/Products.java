@@ -4,10 +4,44 @@
  */
 package electroniconlineshopping;
 
-/**
- *
- * @author marke
- */
+
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Products {
     
+    private String productName;
+    private int serialNumber;
+    private double buyingPrice;
+    private double sellingPrice;
+
+    
+    public Products(String productName, int serialNumber, double buyingPrice, double sellingPrice) {
+        this.productName = productName;
+        this.serialNumber = serialNumber;
+        this.buyingPrice = buyingPrice;
+        this.sellingPrice = sellingPrice;
+    }
+    
+    
+     public double getBuyingPrice() {
+        return buyingPrice;
+    }
+
+     
+    public double getSellingPrice() {
+        return sellingPrice;
+    }
+    
+    
+      @Override
+    public String toString() {
+        return "Product Name: " + productName +
+                ", Serial Number: " + serialNumber +
+                ", Buying Price: $" + buyingPrice +
+                ", Selling Price: $" + sellingPrice;
+    }
+
+
 }
