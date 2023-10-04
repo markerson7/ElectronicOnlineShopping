@@ -11,11 +11,13 @@ import java.util.List;
 
 public class Products {
     
+//Variables  
     private String productName;
     private int serialNumber;
     private double buyingPrice;
     private double sellingPrice;
 
+// Using Parameterized Constructor
     
     public Products(String productName, int serialNumber, double buyingPrice, double sellingPrice) {
         this.productName = productName;

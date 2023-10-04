@@ -13,20 +13,24 @@ import java.util.List;
  */
 public class ElectronicOnlineShoppin {
     
-             
+    
     private List<Products> boughtProducts = new ArrayList<>();
     private List<Products> soldProducts = new ArrayList<>();
-
+    
+// method of products bought
+    
     public void addBoughtProduct(String productName, int serialNumber, double buyingPrice, double sellingPrice) {
         Products product = new Products(productName, serialNumber, buyingPrice, sellingPrice);
         boughtProducts.add(product);
     }
-    
+
+//method of products sold
      public void addSoldProduct(String productName, int serialNumber, double buyingPrice, double sellingPrice) {
         Products product = new Products(productName, serialNumber, buyingPrice, sellingPrice);
         soldProducts.add(product);
     }
 
+//method to display information on all products bought
      
      public void displayProductsBoughtInfo() {
         System.out.println("Products Bought Information:");
@@ -35,11 +39,16 @@ public class ElectronicOnlineShoppin {
             System.out.println(product);
             
         }
+
+//Calculates the total amount spent on the products bought
+        
         System.out.println("====================================");
         double totalSpent = boughtProducts.stream().mapToDouble(Products::getBuyingPrice).sum();
         System.out.println("Total Amount Spent: $" + totalSpent);
     }
      
+
+//method to display information on all products sold
      
         public void displayProductsSoldInfo() {
         System.out.println("Products Sold Information:");
@@ -48,11 +57,16 @@ public class ElectronicOnlineShoppin {
             System.out.println(product);
             
         }
+        
+//Calculates the total amount earned on the products bought        
+        
         System.out.println("====================================");
         double totalEarned = soldProducts.stream().mapToDouble(Products::getSellingPrice).sum();
         System.out.println("Total Amount Earned: $" + totalEarned);
     }
 
+//Calculate the gain and loss on the products bought and sold        
+        
     public void checkBenefit() {
         double totalSpent = boughtProducts.stream().mapToDouble(Products::getBuyingPrice).sum();
         double totalEarned = soldProducts.stream().mapToDouble(Products::getSellingPrice).sum();
