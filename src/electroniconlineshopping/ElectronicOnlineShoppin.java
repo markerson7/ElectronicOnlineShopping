@@ -33,7 +33,7 @@ public class ElectronicOnlineShoppin {
 //method to display information on all products bought
      
      public void displayProductsBoughtInfo() {
-        System.out.println("Products Bought Information:");
+        System.out.println("PRODUCTS BOUGHT INFORMATION:");
         for (Products product : boughtProducts) {
             System.out.println("====================================");
             System.out.println(product);
@@ -44,14 +44,14 @@ public class ElectronicOnlineShoppin {
         
         System.out.println("====================================");
         double totalSpent = boughtProducts.stream().mapToDouble(Products::getBuyingPrice).sum();
-        System.out.println("Total Amount Spent: $" + totalSpent);
+        System.out.println("TOTAL AMOUNT SPENT: $" + totalSpent);
     }
      
 
 //method to display information on all products sold
      
         public void displayProductsSoldInfo() {
-        System.out.println("Products Sold Information:");
+        System.out.println("PRODUCTS SOLD INFORMATION:");
         for (Products product : soldProducts) {
             System.out.println("====================================");
             System.out.println(product);
@@ -62,7 +62,7 @@ public class ElectronicOnlineShoppin {
         
         System.out.println("====================================");
         double totalEarned = soldProducts.stream().mapToDouble(Products::getSellingPrice).sum();
-        System.out.println("Total Amount Earned: $" + totalEarned);
+        System.out.println("TOTAL AMOUNT EARNED: $" + totalEarned);
     }
 
 //Calculate the gain and loss on the products bought and sold        
